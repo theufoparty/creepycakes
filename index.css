@@ -162,7 +162,7 @@ select {
 }
 
 .letter-spacing-1 {
-	letter-spacing: 4.75px;
+	letter-spacing: 6px;
 }
 .letter-spacing-2 {
 	letter-spacing: 2.7px;
@@ -355,13 +355,6 @@ select {
 	place-items: center;
 }
 
-.grid-container--home {
-	display: flex;
-	padding-top: 4rem;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
 .logo {
 	margin-top: 1.5rem;
 	margin-left: 1.5rem;
@@ -382,8 +375,47 @@ select {
 	flex-wrap: nowrap;
 }
 
-.employee {
+.employee-image {
 	width: 70vw;
+}
+
+.building {
+	width: 70vw;
+}
+
+.grid-container--home {
+	display: flex;
+	padding-top: 4rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.grid-container--product {
+	display: flex;
+	padding-top: 4rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.grid-container--about {
+	display: flex;
+	padding-top: 4rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.grid-container--reviews {
+	display: flex;
+	padding-top: 4rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.grid-container--contact {
+	display: flex;
+	padding-top: 4rem;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 @media (min-width: 35em) {
@@ -415,7 +447,6 @@ select {
 	.logo {
 		display: flex;
 		align-items: center;
-		margin-left: -0.7rem;
 		margin-top: 0;
 	}
 
@@ -431,8 +462,11 @@ select {
 		display: flex;
 		flex-wrap: nowrap;
 	}
+	.building {
+		width: 40vw;
+	}
 
-	.employee {
+	.employee-image {
 		width: 30vw;
 	}
 }
@@ -446,7 +480,6 @@ footer {
 }
 
 .content-container {
-	width: 70vw;
 	margin-bottom: 2rem;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
