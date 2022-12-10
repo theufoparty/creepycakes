@@ -372,6 +372,7 @@ select {
 /* LAYOUT */
 
 .grid-container {
+	padding: 2rem;
 	text-align: center;
 	place-items: center;
 }
