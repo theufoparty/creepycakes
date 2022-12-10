@@ -9,19 +9,32 @@
 	--fs-600: 1rem;
 	--fs-500: 1rem;
 	--fs-400: 0.9375rem;
+	--fs-300: 0.5rem;
 
 	--ff-serif: "Bellefair", serif;
 	--ff-sans-cond: "Barlow Condensed", sans-serif;
 	--ff-sans-normal: "Barlow", sans-serif;
 }
 
-@media (min-width: 35em) {
+@media (max-width: 35em) {
 	:root {
 		--fs-800: 5rem;
 		--fs-700: 2.5rem;
 		--fs-600: 1.5rem;
 		--fs-500: 1.25rem;
 		--fs-400: 1rem;
+		--fs-300: 0.8rem;
+	}
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+	:root {
+		--fs-800: 5rem;
+		--fs-700: 2.5rem;
+		--fs-600: 1.5rem;
+		--fs-500: 1.25rem;
+		--fs-400: 1rem;
+		--fs-300: 0.8rem;
 	}
 }
 
@@ -33,6 +46,7 @@
 		--fs-600: 2rem;
 		--fs-500: 1.75rem;
 		--fs-400: 1.125rem;
+		--fs-300: 0.9rem;
 	}
 }
 
@@ -351,21 +365,23 @@ select {
 /* LAYOUT */
 
 .grid-container {
+	padding-top: 3rem;
 	text-align: center;
 	place-items: center;
 }
 
-.logo {
+.logo-text {
 	margin-top: 1.5rem;
 	margin-left: 1.5rem;
 	display: none;
 }
 
-.logo-cake {
-	width: 60vw;
+.call-to-action-image {
+	padding-top: 2rem;
+	width: 80vw;
 }
 
-.cc-logo {
+.logo {
 	width: 4rem;
 	padding: 0.5rem 0 0 0.5rem;
 }
@@ -375,60 +391,71 @@ select {
 	flex-wrap: nowrap;
 }
 
+.footer-logo {
+	width: 2vw;
+}
+
+footer {
+	font-size: 0.7rem;
+}
+
+.footer-layout {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: 0.5rem;
+	opacity: 0.8;
+}
+
 .employee-image {
 	width: 70vw;
 }
 
-.building {
+.product-image {
+	width: 70vw;
+}
+
+.building-image {
 	width: 70vw;
 }
 
 .grid-container--home {
 	display: flex;
-	padding-top: 4rem;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
 .grid-container--product {
 	display: flex;
-	padding-top: 4rem;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
 .grid-container--about {
 	display: flex;
-	padding-top: 4rem;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
 .grid-container--reviews {
 	display: flex;
-	padding-top: 4rem;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
 .grid-container--contact {
 	display: flex;
-	padding-top: 4rem;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
 @media (min-width: 35em) {
-	.grid-container--home {
-		padding-top: 3rem;
-	}
-
-	.logo {
+	.logo-text {
 		display: none;
 	}
 }
 
-@media (min-width: 55em) {
+@media (min-width: 45em) {
 	.grid-container {
 		text-align: left;
 		flex-wrap: nowrap;
@@ -444,17 +471,18 @@ select {
 		/* flex-wrap: nowrap; */
 		padding: 0 2rem 0 2rem;
 	}
-	.logo {
+	.logo-text {
 		display: flex;
 		align-items: center;
 		margin-top: 0;
 	}
 
-	.logo-cake {
-		width: 30vw;
+	.call-to-action-image {
+		width: 40vw;
+		padding: 2rem;
 	}
 
-	.cc-logo {
+	.logo {
 		width: 7rem;
 	}
 
@@ -462,21 +490,17 @@ select {
 		display: flex;
 		flex-wrap: nowrap;
 	}
-	.building {
+	.building-image {
 		width: 40vw;
 	}
 
 	.employee-image {
 		width: 30vw;
 	}
-}
 
-footer {
-	padding: 1rem;
-	padding-top: 2rem;
-	font-size: 10px;
-	justify-content: center;
-	padding-bottom: 1rem;
+	.product-image {
+		width: 40vw;
+	}
 }
 
 .content-container {
@@ -488,21 +512,12 @@ footer {
 	padding-right: 1.5rem;
 }
 
-img {
-	max-width: 70vw;
-}
-
 .text-opacity {
-	opacity: 0.2;
-}
-
-.header-opacity {
-	opacity: 0.9;
+	opacity: 0.8;
 }
 
 .grow img {
 	transition: 1s ease;
-	/* HUR SKA JAG FÅ DEN TILL BOTTEN UTAN PADDING??? */
 }
 
 .grow img:hover {
@@ -527,8 +542,4 @@ img {
 	position: absolute;
 	bottom: 5rem;
 	justify-self: center;
-}
-
-.footer-logo {
-	width: 2rem;
 }
