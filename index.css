@@ -465,6 +465,10 @@ footer {
 	width: 70vw;
 }
 
+.cake-image {
+	width: 80vw;
+}
+
 @media (min-width: 35em) and (max-width: 59.999em) {
 	.logo-text {
 		display: none;
