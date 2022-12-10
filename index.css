@@ -263,11 +263,8 @@ select {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-}
-
-.secondary-navigation {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .secondary-navigation a {
@@ -432,7 +429,7 @@ select {
 }
 
 footer {
-	font-size: 0.7rem;
+	font-size: 0.5rem;
 }
 
 .footer-layout {
@@ -509,5 +506,9 @@ footer {
 
 	.product-image {
 		width: 40vw;
+	}
+
+	footer {
+		font-size: 0.7rem;
 	}
 }
