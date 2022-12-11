@@ -1,6 +1,3 @@
-$breakpoint-tablet: 35em;
-$breakpoint-desktop: 60em;
-
 $footer-height: var(--footer-height);
 $header-height: var(--header-height);
 $employee-height: calc(100vh - #{$header-height} - #{$footer-height});
@@ -12,7 +9,7 @@ $employee-image-height-desktop: calc(#{$employee-height} - 150px);
 	display: flex;
 	overflow: auto;
 	scroll-snap-type: x mandatory;
-	@media (min-width: $breakpoint-desktop) {
+	@include breakpoints("desktop") {
 		overflow-x: hidden;
 		overflow-y: auto;
 	}
@@ -27,7 +24,7 @@ $employee-image-height-desktop: calc(#{$employee-height} - 150px);
 	img {
 		width: 50px;
 	}
-	@media (min-width: $breakpoint-desktop) {
+	@include breakpoints("desktop") {
 		display: block;
 	}
 }
@@ -51,7 +48,7 @@ $employee-image-height-desktop: calc(#{$employee-height} - 150px);
 	.employee--image {
 		max-height: $employee-image-height-mobile;
 		min-height: $employee-image-height-mobile;
-		@media (min-width: $breakpoint-desktop) {
+		@include breakpoints("desktop") {
 			max-height: $employee-image-height-desktop;
 			min-height: $employee-image-height-desktop;
 		}
