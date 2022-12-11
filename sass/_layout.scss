@@ -28,17 +28,16 @@
 
 .call-to-action-image {
 	padding-top: 2rem;
-	width: 80vw;
+	width: 70vw;
 }
 
 /* Product Styling */
 
 .grid-container--product {
+	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	text-align: center;
-	place-items: center;
 }
 
 .product-image {
@@ -135,7 +134,7 @@
 	}
 
 	.call-to-action-image {
-		width: 40vw;
+		width: 35vw;
 		padding: 2rem;
 	}
 

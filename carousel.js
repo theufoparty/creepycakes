@@ -20,7 +20,7 @@ const nextItem = () => {
 		activeItem += 1;
 	}
 	const element = document.getElementById(itemIds[activeItem]);
-	element.scrollIntoView({ behavior: "smooth", block: "end" });
+	element.scrollIntoView({ behavior: "smooth" });
 };
 
 const lastItem = () => {
@@ -30,7 +30,7 @@ const lastItem = () => {
 		activeItem -= 1;
 	}
 	const element = document.getElementById(itemIds[activeItem]);
-	element.scrollIntoView({ behavior: "smooth", block: "end" });
+	element.scrollIntoView({ behavior: "smooth" });
 };
 
 rightButton.addEventListener("click", nextItem);
