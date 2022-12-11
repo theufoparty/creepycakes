@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="sass/styles.css" />
 		<title>Product - Creepy Cakes</title>
 		<script src="navigation.js" defer></script>
+		<script src="carousel.js" defer></script>
 	</head>
 	<body class="home">
 		<header class="primary-header flex">
@@ -59,51 +60,92 @@
 		</header>
 
 		<main id="main" class="grid-container grid-container--product">
-			<section class="home-text">
-				<h1 class="text-accent fs-400 ff-sans-cond uppercase letter-spacing-1">
-					<span class="fs-700 ff-serif text-white">Our Products</span><br />
-					for creepy children.
-				</h1>
-
-				<p class="text-white fs-300 text-opacity">
-					Creepy Cakes is the go-to bakery for all your horror themed dessert needs. From creepy
-					birthday cakes to horrifying Halloween cupcakes, Creepy Cakes has the most delicious and
-					terrifying treats around. Their birthday cakes come in a variety of flavors such as
-					chocolate, vanilla, and red velvet, with a variety of spooky things to choose from. Some
-					of their most popular designs include a Cthulhu cake with a giant squid-like monster in
-					the center, a Shoggoth cake covered in squiggly black gummy worms, and a tentacle
-					encrusted cake with an evil eye in the middle. All cakes are made with the highest quality
-					organic ingredients, ensuring that you get the best tasting cake in town. In addition to
-					their incredible cake selection, Creepy Cakes also offers a wide variety of lovecraftian
-					inspired cupcakes and cookies. Their cupcake flavors range from classic favorites such as
-					chocolate and vanilla, to unique treats like Earl Grey and banana nut. They also offer a
-					selection of cookies with various lovecraftian designs such as evil eyes, tentacled
-					monsters, and eldritch symbols. No matter the occasion, Creepy Cakes has a delicious and
-					creative dessert to make any occasion extra special. If you’re looking for something truly
-					unique and delicious, look no further than Creepy Cakes.
-				</p>
-			</section>
-
-			<section class="">
-				<img class="product-image" src="/ANSTÄLLDA/w-cake1.png" alt="" />
-
-				<p class="text-white fs-300 text-opacity">Text about the cake</p>
-
-				<img class="product-image" src="/ANSTÄLLDA/1whitecake.png" alt="" />
-
-				<p class="text-white fs-300 text-opacity">Text about the cake</p>
-
-				<img class="product-image" src="/ANSTÄLLDA/1blackcake.png" alt="" />
-
-				<p class="text-white fs-300 text-opacity">Text about the cake</p>
-
-				<img class="product-image" src="/ANSTÄLLDA/ccake1.png" alt="" />
-
-				<p class="text-white fs-300 text-opacity">Text about the cake</p>
-
-				<img class="product-image" src="/ANSTÄLLDA/ccake2.png" alt="" />
-
-				<p class="text-white fs-300 text-opacity">Text about the cake</p>
+			<section class="content-container">
+				<button class="arrow-button" id="left--button">
+					<img src="ANSTÄLLDA/rightarrow.png" />
+				</button>
+				<button class="arrow-button" id="right--button">
+					<img src="ANSTÄLLDA/rightarrow.png" />
+				</button>
+				<div class="carousel">
+					<div class="carousel-item">
+						<img class="carousel-item--image" src="/ANSTÄLLDA/eyeballs.png" alt="" />
+						<div class="carousel-item-info-container">
+							<h2 class="ff-serif uppercase header-opacity fs-500">Our Products</h2>
+							<h3 class="ff-sans-cond uppercase header-opacity text-accent letter-spacing-1 fs-400">
+								Taste the terror!
+							</h3>
+							<p class="text-opacity fs-300 carousel-item-text">
+								Creepy Cakes is the place for horror themed desserts. From birthday cakes to
+								Halloween cupcakes, they have the most delicious and terrifying treats. Choose from
+								flavors like chocolate, vanilla and red velvet, with designs such as Cthulhu,
+								Shoggoth and tentacle cakes.
+							</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="carousel-item--image" src="/ANSTÄLLDA/w-cake1.png" alt="" />
+						<div class="carousel-item-info-container">
+							<h2 class="ff-serif uppercase header-opacity fs-500">Spellbound Sweetheart</h2>
+							<h3 class="ff-sans-cond uppercase header-opacity text-accent letter-spacing-1 fs-400">
+								Haunted Happily Ever After
+							</h3>
+							<p class="text-opacity fs-300 carousel-item-text">
+								A tall three tier white wedding cake with moist layers and light cream cheese
+								frosting. Top tier adorned with lace pattern and sides with white chocolate curls.
+								Black tentacles add a mysterious yet elegant touch, perfect combination of elegance
+								and whimsy! Let us help make your special day unforgettable.
+							</p>
+							<div class="purchase-button-container">
+								<button class="purchase-button">
+									<img class="purchase-button-image" src="ANSTÄLLDA/Purchase-Button.png" />
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="carousel-item--image" src="/ANSTÄLLDA/devilcake.png" alt="" />
+						<div class="carousel-item-info-container">
+							<h2 class="ff-serif uppercase header-opacity fs-500">Sinful Sweet</h2>
+							<h3 class="ff-sans-cond uppercase header-opacity text-accent letter-spacing-1 fs-400">
+								A Taste of Hell!
+							</h3>
+							<p class="text-opacity fs-300 carousel-item-text">
+								This three tier spooky wedding cake from the Creepy Cakes bakery is perfect for the
+								modern gothic wedding. It stands on a platform made out of black edible tentacles,
+								and is frosted in white. The tiers are adorned with handcrafted white tentacles and
+								candles, making it a truly unique and eye-catching centerpiece. Suitable for all
+								dietary requirements, it’s the perfect way to add a touch of spooky fun to your
+								special day.
+							</p>
+							<div class="purchase-button-container">
+								<button class="purchase-button">
+									<img class="purchase-button-image" src="ANSTÄLLDA/Purchase-Button.png" />
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="carousel-item--image" src="/ANSTÄLLDA/ccake2.png" alt="" />
+						<div class="carousel-item-info-container">
+							<h2 class="ff-serif uppercase header-opacity fs-500">Deep Sea Delight</h2>
+							<h3 class="ff-sans-cond uppercase header-opacity text-accent letter-spacing-1 fs-400">
+								Unlock the Depths of Sweetness!
+							</h3>
+							<p class="text-opacity fs-300 carousel-item-text">
+								Deep Sea Delight is a sinister and spooky cupcake. The dark, squid-topped treat is
+								sure to tantalize with its burning eyes and mysterious flavor. Perfect for a
+								midnight snack or a Halloween feast, Deep Sea Delight is sure to leave a lasting
+								impression.
+							</p>
+							<div class="purchase-button-container">
+								<button class="purchase-button">
+									<img class="purchase-button-image" src="ANSTÄLLDA/Purchase-Button.png" />
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 

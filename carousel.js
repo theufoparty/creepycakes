@@ -1,37 +1,37 @@
 const leftButton = document.getElementById("left--button");
 const rightButton = document.getElementById("right--button");
 
-let activeEmployee = 0;
+const items = document.getElementsByClassName("carousel-item");
 
-const employeeIds = [
-	"employee-0",
-	"employee-1",
-	"employee-2",
-	"employee-3",
-	"employee-4",
-	"employee-5",
-	"employee-6",
-];
+let activeItem = 0;
 
-const nextEmployee = () => {
-	if (activeEmployee === employeeIds.length - 1) {
-		activeEmployee = 0;
+let itemIds = [];
+
+for (let i = 0; i < items.length; i++) {
+	const id = `carousel-item-${i}`;
+	items[i].setAttribute("id", id);
+	itemIds.push(id);
+}
+
+const nextItem = () => {
+	if (activeItem === itemIds.length - 1) {
+		activeItem = 0;
 	} else {
-		activeEmployee += 1;
+		activeItem += 1;
 	}
-	const element = document.getElementById(employeeIds[activeEmployee]);
+	const element = document.getElementById(itemIds[activeItem]);
 	element.scrollIntoView({ behavior: "smooth", block: "end" });
 };
 
-const lastEmployee = () => {
-	if (activeEmployee === 0) {
-		activeEmployee = employeeIds.length - 1;
+const lastItem = () => {
+	if (activeItem === 0) {
+		activeItem = itemIds.length - 1;
 	} else {
-		activeEmployee -= 1;
+		activeItem -= 1;
 	}
-	const element = document.getElementById(employeeIds[activeEmployee]);
+	const element = document.getElementById(itemIds[activeItem]);
 	element.scrollIntoView({ behavior: "smooth", block: "end" });
 };
 
-rightButton.addEventListener("click", nextEmployee);
-leftButton.addEventListener("click", lastEmployee);
+rightButton.addEventListener("click", nextItem);
+leftButton.addEventListener("click", lastItem);

@@ -1,8 +1,9 @@
 $footer-height: var(--footer-height);
 $header-height: var(--header-height);
-$employee-height: calc(100vh - #{$header-height} - #{$footer-height});
-$employee-image-height-mobile: calc(#{$employee-height} - 300px);
-$employee-image-height-desktop: calc(#{$employee-height} - 150px);
+$carousel-item-height: calc(100vh - #{$header-height} - #{$footer-height});
+$carousel-item-image-height-mobile: calc(#{$carousel-item-height} - 300px);
+$carousel-item-image-height-desktop: calc(#{$carousel-item-height} - 150px);
+$carousel-item-desktop-margin: 100px;
 
 .carousel {
 	max-width: 100vw;
@@ -30,38 +31,53 @@ $employee-image-height-desktop: calc(#{$employee-height} - 150px);
 }
 
 #left--button {
-	left: 200px;
+	left: $carousel-item-desktop-margin / 2;
 	transform: rotate(180deg);
 }
 
 #right--button {
-	right: 200px;
+	right: $carousel-item-desktop-margin / 2;
 }
 
-.employee {
+.carousel-item {
 	scroll-snap-align: start;
-	height: $employee-height;
+	height: $carousel-item-height;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	min-width: 100vw;
-	.employee--image {
-		max-height: $employee-image-height-mobile;
-		min-height: $employee-image-height-mobile;
+	@include breakpoints("desktop") {
+		flex-direction: row;
+		align-items: flex-start;
+		min-width: calc(100vw - 2 * $carousel-item-desktop-margin);
+		max-width: calc(100vw - 2 * $carousel-item-desktop-margin);
+		margin-right: $carousel-item-desktop-margin;
+		padding-left: $carousel-item-desktop-margin;
+	}
+	.carousel-item--image {
+		max-height: $carousel-item-image-height-mobile;
+		min-height: $carousel-item-image-height-mobile;
 		@include breakpoints("desktop") {
-			max-height: $employee-image-height-desktop;
-			min-height: $employee-image-height-desktop;
+			max-height: $carousel-item-image-height-desktop;
+			min-height: $carousel-item-image-height-desktop;
 		}
 	}
-	.employee-text {
-		width: 70vw;
-		padding: 0 2em;
+	.carousel-item-info-container {
 		text-align: center;
+		@include breakpoints("desktop") {
+			text-align: left;
+			max-height: $carousel-item-height;
+			overflow: auto;
+			padding-top: 100px;
+		}
 	}
-
-	.email-text {
+	.carousel-item-text {
 		width: 70vw;
 		padding: 0 2em;
-		text-align: center;
+		@include breakpoints("desktop") {
+			text-align: left;
+			width: 100%;
+			padding: 1em 0;
+		}
 	}
 }

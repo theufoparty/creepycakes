@@ -144,15 +144,15 @@
 }
 
 #left--button {
-  left: 200px;
+  left: 50px;
   transform: rotate(180deg);
 }
 
 #right--button {
-  right: 200px;
+  right: 50px;
 }
 
-.employee {
+.carousel-item {
   scroll-snap-align: start;
   height: calc(100vh - var(--header-height) - var(--footer-height));
   display: flex;
@@ -160,25 +160,47 @@
   align-items: center;
   min-width: 100vw;
 }
-.employee .employee--image {
+@media (min-width: 60em) {
+  .carousel-item {
+    flex-direction: row;
+    align-items: flex-start;
+    min-width: calc(100vw - 200px);
+    max-width: calc(100vw - 200px);
+    margin-right: 100px;
+    padding-left: 100px;
+  }
+}
+.carousel-item .carousel-item--image {
   max-height: calc(calc(100vh - var(--header-height) - var(--footer-height)) - 300px);
   min-height: calc(calc(100vh - var(--header-height) - var(--footer-height)) - 300px);
 }
 @media (min-width: 60em) {
-  .employee .employee--image {
+  .carousel-item .carousel-item--image {
     max-height: calc(calc(100vh - var(--header-height) - var(--footer-height)) - 150px);
     min-height: calc(calc(100vh - var(--header-height) - var(--footer-height)) - 150px);
   }
 }
-.employee .employee-text {
-  width: 70vw;
-  padding: 0 2em;
+.carousel-item .carousel-item-info-container {
   text-align: center;
 }
-.employee .email-text {
+@media (min-width: 60em) {
+  .carousel-item .carousel-item-info-container {
+    text-align: left;
+    max-height: calc(100vh - var(--header-height) - var(--footer-height));
+    overflow: auto;
+    padding-top: 100px;
+  }
+}
+.carousel-item .carousel-item-text {
   width: 70vw;
   padding: 0 2em;
-  text-align: center;
+}
+@media (min-width: 60em) {
+  .carousel-item .carousel-item-text {
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+  }
 }
 
 :root {
@@ -465,7 +487,6 @@ select {
   justify-content: center;
   text-align: center;
   place-items: center;
-  padding: 0 2rem 0 2rem;
 }
 
 .product-image {
@@ -772,4 +793,25 @@ form input[type=radio] {
 
 .row .input-group {
   flex-basis: 48%;
+}
+
+.purchase-button-container {
+  margin-top: -10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.purchase-button {
+  color: #fff;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.purchase-button-image {
+  max-width: 10rem;
 }/*# sourceMappingURL=styles.css.map */
