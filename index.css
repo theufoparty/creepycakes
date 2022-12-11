@@ -14,6 +14,9 @@
 	--ff-serif: "Bellefair", serif;
 	--ff-sans-cond: "Barlow Condensed", sans-serif;
 	--ff-sans-normal: "Barlow", sans-serif;
+
+	--footer-height: 24px;
+	--header-height: 72px;
 }
 
 @media (max-width: 35em) {
@@ -40,13 +43,15 @@
 
 @media (min-width: 60em) {
 	:root {
-		/* font-sizes */
 		--fs-800: 6rem;
 		--fs-700: 3.5rem;
 		--fs-600: 2rem;
 		--fs-500: 1.75rem;
 		--fs-400: 1.125rem;
 		--fs-300: 0.9rem;
+
+		--header-height: 120px;
+		--footer-height: 37.34px;
 	}
 }
 
@@ -244,8 +249,14 @@ select {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	background: hsl(var(--clr-white) / 0.1);
-	backdrop-filter: blur(1.5rem);
+	background: black;
+}
+
+@supports (backdrop-filter: blur(1.5rem)) {
+	.primary-navigation {
+		background: hsl(var(--clr-white) / 0.1);
+		backdrop-filter: blur(1.5rem);
+	}
 }
 
 .primary-navigation a {
@@ -372,39 +383,73 @@ select {
 /* LAYOUT */
 
 .grid-container {
-	padding: 2rem;
-	text-align: center;
-	place-items: center;
+	padding: 2rem 0 0 0;
 }
+
+/* Home Styling */
 
 .grid-container--home {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	text-align: center;
+	place-items: center;
+	padding: 0 2rem 0 2rem;
 }
+
+.call-to-action-image {
+	padding-top: 2rem;
+	width: 80vw;
+}
+
+/* Product Styling */
 
 .grid-container--product {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	text-align: center;
+	place-items: center;
+	padding: 0 2rem 0 2rem;
 }
 
+.product-image {
+	width: 70vw;
+}
+
+/* About Styling */
+
 .grid-container--about {
+	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
+/* Reviews Styling */
 
 .grid-container--reviews {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	text-align: center;
+	place-items: center;
+	padding: 0 2rem 0 2rem;
 }
+
+/* Contact Styling */
 
 .grid-container--contact {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	text-align: center;
+	place-items: center;
+	padding: 0 2rem 0 2rem;
+}
+
+.building-image {
+	width: 70vw;
 }
 
 /* LOGO STYLING */
@@ -444,29 +489,6 @@ footer {
 .copyright-text {
 	margin-top: 0.4rem;
 	opacity: 0.3;
-}
-
-/* IMAGES STYLING */
-
-.call-to-action-image {
-	padding-top: 2rem;
-	width: 80vw;
-}
-
-.employee-image {
-	width: 70vw;
-}
-
-.product-image {
-	width: 70vw;
-}
-
-.building-image {
-	width: 70vw;
-}
-
-.cake-image {
-	width: 30vw;
 }
 
 @media (min-width: 35em) and (max-width: 59.999em) {
