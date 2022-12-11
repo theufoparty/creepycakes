@@ -75,6 +75,7 @@ $carousel-item-desktop-margin: 100px;
 	}
 	.carousel-item-text {
 		width: 70vw;
+		margin: 0 auto;
 		padding: 0 2em;
 		@include breakpoints("desktop") {
 			text-align: left;
