@@ -59,74 +59,76 @@
 		</header>
 
 		<main id="main" class="grid-container grid-container--contact">
-			<section>
-				<h1 class="text-accent fs-400 ff-sans-cond uppercase letter-spacing-1">
-					<span class="fs-700 ff-serif text-white">Contact us</span><br />
-					for creepy children.
-				</h1>
+			<section class="contact-page">
+				<section>
+					<h1 class="text-accent fs-400 ff-sans-cond uppercase letter-spacing-1">
+						<span class="fs-700 ff-serif text-white">Contact us</span><br />
+						for creepy children.
+					</h1>
 
-				<p class="text-opacity fs-300">
-					Here at Creepy Cakes Bakery, we specialize in the creation of sinister sweets, crafted
-					with the utmost care and precision. Our pastries are sure to tantalize your taste buds and
-					chill your soul. So if you're seeking a confectionary experience like no other, contact us
-					today. We are here to help you craft your one-of-a-kind nightmare. Our bakers are versed
-					in the language of the Victorians and will be sure to add a touch of horror to all of your
-					orders. We look forward to hearing from you soon and helping you create a cake that will
-					haunt your dreams.
-				</p>
+					<p class="text-opacity fs-300">
+						Here at Creepy Cakes Bakery, we specialize in the creation of sinister sweets, crafted
+						with the utmost care and precision. Our pastries are sure to tantalize your taste buds
+						and chill your soul. So if you're seeking a confectionary experience like no other,
+						contact us today. We are here to help you craft your one-of-a-kind nightmare. Our bakers
+						are versed in the language of the Victorians and will be sure to add a touch of horror
+						to all of your orders. We look forward to hearing from you soon and helping you create a
+						cake that will haunt your dreams.
+					</p>
+
+					<img class="building-image" src="/ANSTÄLLDA/Building.png" alt="" />
+				</section>
 			</section>
 
-			<section><img class="building-image" src="/ANSTÄLLDA/Building.png" alt="" /></section>
+			<section class="contact-page form-container text-opacity letter-spacing-2">
+				<form action="">
+					<div class="row">
+						<div class="input-group">
+							<input type="text" id="name" required />
+							<label class="text-label" for="name">Name</label>
+						</div>
+						<div class="input-group">
+							<input type="text" id="surname" required />
+							<label class="text-label" for="surname">Surname</label>
+						</div>
+					</div>
+					<div class="input-group">
+						<input type="email" id="email" pattern=".+@.+\..+" required />
+						<label class="text-label" for="email">Email</label>
+					</div>
+					<div class="contact-details">
+						<input type="radio" name="contact" id="dot-1" />
+						<input type="radio" name="contact" id="dot-2" />
+						<input type="radio" name="contact" id="dot-3" />
+
+						<div class="padding category ff-cond uppercase letter-spacing-2">
+							<label for="dot-1">
+								<span class="dot one"></span>
+								<span class="contact">Questions</span>
+							</label>
+							<label for="dot-2">
+								<span class="dot two"></span>
+								<span class="contact">Purchase</span>
+							</label>
+							<label for="dot-3">
+								<span class="dot three"></span>
+								<span class="contact">Other</span>
+							</label>
+						</div>
+					</div>
+					<div class="input-group">
+						<textarea id="message" rows="15" required></textarea>
+						<label class="text-label" for="message">Your Message</label>
+					</div>
+
+					<div class="send-button-container">
+						<button class="send-button" type="submit">
+							<img class="send-button-image" src="/ANSTÄLLDA/Send-Button.png" alt="" />
+						</button>
+					</div>
+				</form>
+			</section>
 		</main>
-
-		<section class="form-container text-opacity letter-spacing-2">
-			<form action="">
-				<div class="row">
-					<div class="input-group">
-						<input type="text" id="name" required />
-						<label class="text-label" for="name">Name</label>
-					</div>
-					<div class="input-group">
-						<input type="text" id="surname" required />
-						<label class="text-label" for="surname">Surname</label>
-					</div>
-				</div>
-				<div class="input-group">
-					<input type="email" id="email" pattern=".+@.+\..+" required />
-					<label class="text-label" for="email">Email</label>
-				</div>
-				<div class="contact-details">
-					<input type="radio" name="contact" id="dot-1" />
-					<input type="radio" name="contact" id="dot-2" />
-					<input type="radio" name="contact" id="dot-3" />
-
-					<div class="padding category ff-cond uppercase letter-spacing-2">
-						<label for="dot-1">
-							<span class="dot one"></span>
-							<span class="contact">Questions</span>
-						</label>
-						<label for="dot-2">
-							<span class="dot two"></span>
-							<span class="contact">Purchase</span>
-						</label>
-						<label for="dot-3">
-							<span class="dot three"></span>
-							<span class="contact">Other</span>
-						</label>
-					</div>
-				</div>
-				<div class="input-group">
-					<textarea id="message" rows="10" required></textarea>
-					<label class="text-label" for="message">Your Message</label>
-				</div>
-
-				<div class="send-button-container">
-					<button class="send-button" type="submit">
-						<img class="send-button-image" src="/ANSTÄLLDA/Send-Button.png" alt="" />
-					</button>
-				</div>
-			</form>
-		</section>
 
 		<footer class="ff-sans-cond text-accent">
 			<nav>

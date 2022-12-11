@@ -58,4 +58,10 @@ $employee-image-height-desktop: calc(#{$employee-height} - 150px);
 		padding: 0 2em;
 		text-align: center;
 	}
+
+	.email-text {
+		width: 70vw;
+		padding: 0 2em;
+		text-align: center;
+	}
 }

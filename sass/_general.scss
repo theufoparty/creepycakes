@@ -21,15 +21,8 @@
 	opacity: 0.8;
 }
 
-.grow img {
-	transition: 1s ease;
-}
-
-.grow img:hover {
-	-webkit-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	transform: scale(1.1);
-	transition: 1s ease;
+.header-opacity {
+	opacity: 0.9;
 }
 
 /* ------------------- */
