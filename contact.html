@@ -12,7 +12,7 @@
 		/>
 
 		<!-- Our custom CSS -->
-		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="sass/styles.css" />
 		<title>Contact us - Creepy Cakes</title>
 		<script src="navigation.js" defer></script>
 	</head>
@@ -61,7 +61,8 @@
 		<main id="main" class="grid-container grid-container--contact">
 			<section>
 				<h1 class="text-accent fs-400 ff-sans-cond uppercase letter-spacing-1">
-					<span class="d-block fs-700 ff-serif text-white">Contact us</span> for creepy children.
+					<span class="fs-700 ff-serif text-white">Contact us</span><br />
+					for creepy children.
 				</h1>
 
 				<p class="text-opacity fs-300">
@@ -85,6 +86,51 @@
 					be summoned to partake in our otherworldly delights. Reach us at this very number, and may
 					the eerie realm of Creepy Cakes Bakery be opened to thee.
 				</p>
+			</section>
+
+			<section class="form-container text-opacity letter-spacing-2">
+				<form action="">
+					<div class="row">
+						<div class="input-group">
+							<input type="text" id="name" required />
+							<label class="text-label" for="name">Name</label>
+						</div>
+						<div class="input-group">
+							<input type="text" id="surname" required />
+							<label class="text-label" for="name">Surname</label>
+						</div>
+					</div>
+					<div class="input-group">
+						<input type="email" id="email" pattern=".+@.+\..+" required />
+						<label class="text-label" for="email">Email</label>
+					</div>
+					<div class="contact-details">
+						<input type="radio" name="contact" id="dot-1" />
+						<input type="radio" name="contact" id="dot-2" />
+						<input type="radio" name="contact" id="dot-3" />
+
+						<div class="padding category ff-cond uppercase letter-spacing-2">
+							<label for="dot-1">
+								<span class="dot one"></span>
+								<span class="contact">Questions</span>
+							</label>
+							<label for="dot-2">
+								<span class="dot two"></span>
+								<span class="contact">Purchase</span>
+							</label>
+							<label for="dot-3">
+								<span class="dot three"></span>
+								<span class="contact">Other</span>
+							</label>
+						</div>
+					</div>
+					<div class="input-group">
+						<textarea id="message" rows="10" required></textarea>
+						<label class="text-label" for="message">Your Message</label>
+					</div>
+
+					<button class="ff-sans-cond letter-spacing-2" type="submit">SEND</button>
+				</form>
 			</section>
 
 			<section><img class="building-image" src="/ANSTÄLLDA/Building.png" alt="" /></section>

@@ -1,0 +1,108 @@
+.form-container {
+	box-sizing: border-box;
+	width: 100%;
+	background: hsl(var(--clr-dark));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+form {
+	width: 90%;
+	max-width: 600px;
+}
+
+.input-group {
+	margin-bottom: 30px;
+	position: relative;
+	box-sizing: border-box;
+}
+
+input,
+textarea {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+	outline: 0;
+	border: 1px solid hsl(var(--clr-light));
+	border-radius: 4px;
+	color: #fff;
+	background: transparent;
+	font-size: 8px;
+}
+
+.text-label {
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 10px;
+	color: #fff;
+	cursor: text;
+	transition: 0.2s;
+	font-size: 10px;
+}
+
+button {
+	padding: 10px;
+	color: #fff;
+	outline: none;
+	background: transparent;
+	border: 1px solid hsl(var(--clr-light));
+	width: 100%;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+	top: -35px;
+	font-size: 14px;
+}
+
+.contact-details {
+	font-size: 10px;
+}
+
+form .contact-details .category {
+	display: flex;
+	margin-bottom: 30px;
+	justify-content: space-between;
+}
+
+.contact-details .category label {
+	display: flex;
+	align-items: center;
+}
+
+.contact-details .category .dot {
+	height: 8px;
+	width: 8px;
+	background: hsl(var(--clr-light));
+	border-radius: 50%;
+	margin-right: 10px;
+	border: 3px solid hsl(var(--clr-light));
+	transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+	border-color: hsl(var(--clr-light));
+	background: hsl(var(--clr-dark));
+}
+
+form input[type="radio"] {
+	display: none;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.row .input-group {
+	flex-basis: 48%;
+}

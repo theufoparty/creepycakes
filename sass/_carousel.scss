@@ -4,7 +4,8 @@ $breakpoint-desktop: 60em;
 $footer-height: var(--footer-height);
 $header-height: var(--header-height);
 $employee-height: calc(100vh - #{$header-height} - #{$footer-height});
-$employee-image-height: calc(#{$employee-height} - 200px);
+$employee-image-height-mobile: calc(#{$employee-height} - 300px);
+$employee-image-height-desktop: calc(#{$employee-height} - 150px);
 
 .carousel {
 	max-width: 100vw;
@@ -48,8 +49,12 @@ $employee-image-height: calc(#{$employee-height} - 200px);
 	align-items: center;
 	min-width: 100vw;
 	.employee--image {
-		max-height: $employee-image-height;
-		min-height: $employee-image-height;
+		max-height: $employee-image-height-mobile;
+		min-height: $employee-image-height-mobile;
+		@media (min-width: $breakpoint-desktop) {
+			max-height: $employee-image-height-desktop;
+			min-height: $employee-image-height-desktop;
+		}
 	}
 	.employee-text {
 		width: 70vw;
