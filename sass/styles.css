@@ -454,10 +454,21 @@ select {
 }
 /* LAYOUT */
 .grid-container {
-  padding: 2rem 0 0 0;
+  padding-top: 1rem;
+}
+@media (min-width: 60em) {
+  .grid-container {
+    text-align: left;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 3rem;
+  }
 }
 
-/* Home Styling */
+/* HOME PAGE STYLING */
 .grid-container--home {
   min-width: 100vw;
   display: flex;
@@ -466,6 +477,16 @@ select {
   justify-content: center;
   text-align: center;
   align-items: flex-start;
+  padding-bottom: 2rem;
+}
+@media (min-width: 60em) {
+  .grid-container--home {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .home-styling {
@@ -473,17 +494,34 @@ select {
   max-width: 70vh;
   margin: 2rem;
 }
+@media (min-width: 60em) {
+  .home-styling {
+    min-width: 45vw;
+    max-width: 45vh;
+    margin: 0;
+  }
+}
 
 .para {
   padding-top: 2rem;
+}
+.align-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .call-to-action-image {
   padding-top: 2rem;
   width: 70vw;
 }
+@media (min-width: 60em) {
+  .call-to-action-image {
+    width: 35vw;
+  }
+}
 
-/* Product Styling */
+/* PRODUCT PAGE STYLING */
 .grid-container--product {
   padding: 0;
   display: flex;
@@ -494,8 +532,13 @@ select {
 .product-image {
   width: 70vw;
 }
+@media (min-width: 60em) {
+  .product-image {
+    width: 45vw;
+  }
+}
 
-/* About Styling */
+/* ABOUT PAGE STYLING */
 .grid-container--about {
   padding: 0;
   display: flex;
@@ -503,7 +546,7 @@ select {
   justify-content: center;
 }
 
-/* Reviews Styling */
+/* REVIEWS PAGE STYLING */
 .grid-container--reviews {
   min-width: 100vw;
   display: flex;
@@ -514,11 +557,28 @@ select {
   align-items: flex-start;
   padding-bottom: 2rem;
 }
+@media (min-width: 60em) {
+  .grid-container--reviews {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
 
 .review {
   min-width: 70vw;
   max-width: 70vh;
   margin: 2rem;
+}
+@media (min-width: 60em) {
+  .review {
+    min-width: 45vw;
+    max-width: 45vh;
+    margin: 0;
+  }
 }
 
 .reviews-span {
@@ -529,7 +589,7 @@ select {
   margin-bottom: 4rem;
 }
 
-/* Contact Styling */
+/* CONTACT PAGE STYLING */
 .grid-container--contact {
   min-width: 100vw;
   display: flex;
@@ -540,84 +600,40 @@ select {
   align-items: flex-start;
   padding-bottom: 2rem;
 }
+@media (min-width: 60em) {
+  .grid-container--contact {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex;
+    justify-content: space-between;
+  }
+}
 
 .contact-page {
   min-width: 70vw;
   max-width: 70vh;
   margin: 2rem;
 }
+@media (min-width: 60em) {
+  .contact-page {
+    max-width: 45vw;
+    min-width: 45vw;
+    margin: 0;
+  }
+}
 
 .building-image {
   width: 70vw;
 }
-
 @media (min-width: 60em) {
-  .grid-container {
-    text-align: left;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    padding-top: 3rem;
-  }
-  .grid-container--home {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-  .home-styling {
-    min-width: 40vw;
-    max-width: 40vh;
-    margin: 0;
-  }
-  .para {
-    margin-top: 2rem;
-  }
-  .call-to-action-image {
-    width: 35vw;
-    padding: 2rem;
-  }
-  .grid-container--contact {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-  .contact-page {
-    max-width: 40vw;
-    min-width: 40vw;
-    margin: 0;
-  }
   .building-image {
     margin-left: 8rem;
     width: 15vw;
   }
-  .employee-image {
-    width: 30vw;
-  }
-  .product-image {
-    width: 40vw;
-  }
-  .grid-container--reviews {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-  .review {
-    min-width: 40vw;
-    max-width: 40vh;
-    margin: 0;
-  }
-  .reviews-span {
-    margin-left: 0.5rem;
-  }
-  .grid-container--reviews {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
 }
+
 .footer-logo {
   width: 2vw;
 }
@@ -684,6 +700,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
 }
 
 form {

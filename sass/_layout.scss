@@ -1,10 +1,19 @@
 /* LAYOUT */
 
 .grid-container {
-	padding: 2rem 0 0 0;
+	padding-top: 1rem;
+	@include breakpoints("desktop") {
+		text-align: left;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		box-sizing: border-box;
+		padding-left: 4rem;
+		padding-right: 4rem;
+		padding-top: 3rem;
+	}
 }
 
-/* Home Styling */
+/* HOME PAGE STYLING */
 
 .grid-container--home {
 	min-width: 100vw;
@@ -14,24 +23,48 @@
 	justify-content: center;
 	text-align: center;
 	align-items: flex-start;
+	padding-bottom: 2rem;
+	@include breakpoints("desktop") {
+		text-align: left;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 }
 
 .home-styling {
 	min-width: 70vw;
 	max-width: 70vh;
 	margin: 2rem;
+	@include breakpoints("desktop") {
+		min-width: 45vw;
+		max-width: 45vh;
+		margin: 0;
+	}
 }
 
 .para {
 	padding-top: 2rem;
+	@include breakpoints("desktop") {
+	}
+}
+
+.align-item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .call-to-action-image {
 	padding-top: 2rem;
 	width: 70vw;
+	@include breakpoints("desktop") {
+		width: 35vw;
+	}
 }
 
-/* Product Styling */
+/* PRODUCT PAGE STYLING */
 
 .grid-container--product {
 	padding: 0;
@@ -42,9 +75,12 @@
 
 .product-image {
 	width: 70vw;
+	@include breakpoints("desktop") {
+		width: 45vw;
+	}
 }
 
-/* About Styling */
+/* ABOUT PAGE STYLING */
 
 .grid-container--about {
 	padding: 0;
@@ -53,7 +89,7 @@
 	justify-content: center;
 }
 
-/* Reviews Styling */
+/* REVIEWS PAGE STYLING */
 
 .grid-container--reviews {
 	min-width: 100vw;
@@ -64,12 +100,25 @@
 	text-align: center;
 	align-items: flex-start;
 	padding-bottom: 2rem;
+	@include breakpoints("desktop") {
+		text-align: left;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
 }
 
 .review {
 	min-width: 70vw;
 	max-width: 70vh;
 	margin: 2rem;
+	@include breakpoints("desktop") {
+		min-width: 45vw;
+		max-width: 45vh;
+		margin: 0;
+	}
 }
 
 .reviews-span {
@@ -80,7 +129,7 @@
 	margin-bottom: 4rem;
 }
 
-/* Contact Styling */
+/* CONTACT PAGE STYLING */
 
 .grid-container--contact {
 	min-width: 100vw;
@@ -91,106 +140,31 @@
 	text-align: center;
 	align-items: flex-start;
 	padding-bottom: 2rem;
+	@include breakpoints("desktop") {
+		text-align: left;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex;
+		justify-content: space-between;
+	}
 }
 
 .contact-page {
 	min-width: 70vw;
 	max-width: 70vh;
 	margin: 2rem;
+	@include breakpoints("desktop") {
+		max-width: 45vw;
+		min-width: 45vw;
+		margin: 0;
+	}
 }
 
 .building-image {
 	width: 70vw;
-}
-
-@media (min-width: 35em) and (max-width: 59.999em) {
-}
-
-@media (min-width: 60em) {
-	.grid-container {
-		text-align: left;
-		flex-wrap: nowrap;
-		justify-content: space-around;
-		padding-top: 3rem;
-	}
-
-	// STYLING HOME PAGE
-
-	.grid-container--home {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: flex-start;
-	}
-
-	.home-styling {
-		min-width: 40vw;
-		max-width: 40vh;
-		margin: 0;
-	}
-
-	.para {
-		margin-top: 2rem;
-	}
-
-	.call-to-action-image {
-		width: 35vw;
-		padding: 2rem;
-	}
-
-	// STYLING CONTACT PAGE
-
-	.grid-container--contact {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: flex-start;
-	}
-
-	.contact-page {
-		max-width: 40vw;
-		min-width: 40vw;
-		margin: 0;
-	}
-
-	.building-image {
+	@include breakpoints("desktop") {
 		margin-left: 8rem;
 		width: 15vw;
-	}
-
-	// STYLING ABOUT PAGE
-
-	.employee-image {
-		width: 30vw;
-	}
-	// STYLING PRODUCT PAGE
-	.product-image {
-		width: 40vw;
-	}
-
-	// STYLING REVIEWS PAGE
-
-	.grid-container--reviews {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: flex-start;
-	}
-
-	.review {
-		min-width: 40vw;
-		max-width: 40vh;
-		margin: 0;
-	}
-
-	.reviews-span {
-		margin-left: 0.5rem;
-	}
-
-	.grid-container--reviews {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: flex-start;
 	}
 }
