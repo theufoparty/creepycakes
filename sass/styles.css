@@ -197,7 +197,7 @@
 .carousel-item .carousel-item-text {
   width: 90vw;
   margin: 0 auto;
-  padding: 0 2em;
+  padding: 0 2em 2em 2em;
 }
 @media (min-width: 60em) {
   .carousel-item .carousel-item-text {
