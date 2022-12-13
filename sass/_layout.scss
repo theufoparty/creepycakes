@@ -33,6 +33,10 @@
 	}
 }
 
+.about-text {
+	padding-bottom: 1rem;
+}
+
 .home-styling {
 	min-width: 70vw;
 	max-width: 70vh;
@@ -57,7 +61,7 @@
 }
 
 .call-to-action-image {
-	padding-top: 2rem;
+	margin-top: 0;
 	width: 70vw;
 	@include breakpoints("desktop") {
 		width: 35vw;
@@ -87,6 +91,14 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+
+.email-text {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	@include breakpoints("desktop") {
+		margin-top: 0;
+	}
 }
 
 /* REVIEWS PAGE STYLING */

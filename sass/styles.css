@@ -6,6 +6,7 @@
   --fs-500: 1rem;
   --fs-400: 0.9375rem;
   --fs-300: 0.5rem;
+  --fs-200: 0.6rem;
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
@@ -194,7 +195,7 @@
   }
 }
 .carousel-item .carousel-item-text {
-  width: 70vw;
+  width: 90vw;
   margin: 0 auto;
   padding: 0 2em;
 }
@@ -489,6 +490,10 @@ select {
   }
 }
 
+.about-text {
+  padding-bottom: 1rem;
+}
+
 .home-styling {
   min-width: 70vw;
   max-width: 70vh;
@@ -512,7 +517,7 @@ select {
 }
 
 .call-to-action-image {
-  padding-top: 2rem;
+  margin-top: 0;
   width: 70vw;
 }
 @media (min-width: 60em) {
@@ -544,6 +549,16 @@ select {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.email-text {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 60em) {
+  .email-text {
+    margin-top: 0;
+  }
 }
 
 /* REVIEWS PAGE STYLING */
@@ -832,5 +847,5 @@ form input[type=radio] {
 }
 
 .purchase-button-image {
-  max-width: 10rem;
+  max-width: 8rem;
 }/*# sourceMappingURL=styles.css.map */
