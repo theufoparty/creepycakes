@@ -156,7 +156,8 @@
 .carousel-item {
   scroll-snap-align: start;
   max-height: calc(100vh - var(--header-height) - var(--footer-height));
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
