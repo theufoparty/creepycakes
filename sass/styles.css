@@ -22,6 +22,7 @@
     --fs-500: 1.25rem;
     --fs-400: 1rem;
     --fs-300: 0.8rem;
+    --fs-200: 0.5rem;
   }
 }
 @media (min-width: 35em) and (max-width: 59.999em) {
@@ -519,11 +520,11 @@ select {
 
 .call-to-action-image {
   margin-top: 0;
-  width: 70vw;
+  width: 90vw;
 }
 @media (min-width: 60em) {
   .call-to-action-image {
-    width: 35vw;
+    width: 38vw;
   }
 }
 
@@ -641,12 +642,12 @@ select {
 }
 
 .building-image {
-  width: 70vw;
+  width: 80vw;
 }
 @media (min-width: 60em) {
   .building-image {
-    margin-left: 8rem;
-    width: 15vw;
+    margin-left: 9rem;
+    width: 18vw;
   }
 }
 

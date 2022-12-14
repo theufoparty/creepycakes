@@ -62,9 +62,9 @@
 
 .call-to-action-image {
 	margin-top: 0;
-	width: 70vw;
+	width: 90vw;
 	@include breakpoints("desktop") {
-		width: 35vw;
+		width: 38vw;
 	}
 }
 
@@ -174,9 +174,9 @@
 }
 
 .building-image {
-	width: 70vw;
+	width: 80vw;
 	@include breakpoints("desktop") {
-		margin-left: 8rem;
-		width: 15vw;
+		margin-left: 9rem;
+		width: 18vw;
 	}
 }
